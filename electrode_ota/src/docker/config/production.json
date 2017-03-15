@@ -1,0 +1,53 @@
+{
+
+ 	"app": {
+        "electrode": true
+    },
+    "connections": {
+        "default": {
+            "routes": {
+                "payload": {
+                    "maxBytes": 4194304
+                }
+            }
+        }
+
+    },
+	"plugins": {
+
+        "electrode-ota-server-dao-cassandra": {
+            "options": {
+                "contactPoints": [
+                    "cassandra"
+                ]
+            }
+        },
+        "electrode-ota-server-fileservice":{
+            "options": {
+              "downloadUrl":"http://192.168.1.109:9001/storagev2"
+            }
+        },
+        "electrode-ota-server-auth": {
+           "options": {
+               "strategy": { 
+
+                   "github-oauth": {
+                       "options": {
+                           "isSecure":false,
+                           "location":"http://eterationota.com:9001",
+                           "clientId": "d83f3758dc11f8b527e4",
+                           "clientSecret": "0706da0a9a78e4946ac9d97a408ffe8131f5f90b"
+                       }
+                   },
+                  "session": {
+                       "options": {
+                           "isSecure":false
+                       }
+                  }
+
+               }
+           }
+       }
+
+    }
+}

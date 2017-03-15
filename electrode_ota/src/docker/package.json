@@ -1,0 +1,18 @@
+{
+  "name": "electrode_ota_server",
+  "version": "1.0.0",
+  "description": "electrode ota server for applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electrode-ota-server": "^1.0.2"
+  },
+  "scripts":{
+    "start":"NODE_ENV=production node node_modules/.bin/electrode-ota-server",
+    "development":"NODE_ENV=development node node_modules/.bin/electrode-ota-server"
+  }
+}
