@@ -17,6 +17,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
+        <preference name="CodePushDeploymentKey" value="JeYMokODiDCPgBvDaozUIAGKrEcbihbtCiXxvAbk" />
+        <preference name="CodePushServerURL" value="http://192.168.1.109:9001" />
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">

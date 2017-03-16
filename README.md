@@ -44,6 +44,21 @@ https://github.com/electrode-io/electrode-ota-server
   <li>Register to OTAServer : code-push register http://eterationota.com:9001
   <li>Add your application to OTA server : code-push app add SimpleMobileApp (in the mobile app folder)
   <li>Install cordova code-push plugin :cordova plugin add cordova-plugin-code-push@latest
-
-
-  TO BE CONTINUE...
+  <li>Edit cordova  project configuration (config.xml): Add Android preferences
+  <table>
+      <tr>
+        <td>CodePushDeploymentKey</td><td>JeYMokODiDCPgBvDaozUIAGKrEcbihbtCiXxvAbk</td>
+      </tr>
+      <tr>
+        <td>CodePushServerURL</td><td>http://192.168.1.109:9001</td>
+      </tr>
+  </table/>
+  </li>
+  <li>Add CodePush sync event to index.js
+  ```javascript
+   document.addEventListener('resume', function () {
+     codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE })
+   })
+   ```
+   <li>Install/Run your application on your mobile device
+   <li>Change your application html or js files and run : in the root folder of SimpleMobileApp: code-push release-cordova albaraka.mobile android

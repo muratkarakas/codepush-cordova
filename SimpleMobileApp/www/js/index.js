@@ -20,6 +20,9 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.addEventListener('resume', function () {
+          codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE })
+        });
     },
 
     // deviceready Event Handler
