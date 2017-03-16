@@ -62,4 +62,4 @@ https://github.com/electrode-io/electrode-ota-server
    })
    ```
    <li>Install/Run your application on your mobile device
-   <li>Change your application html or js files and run : in the root folder of SimpleMobileApp: code-push release-cordova albaraka.mobile android
+   <li>Change your application html or js files and run : in the root folder of SimpleMobileApp: code-push release-cordova SimpleMobileApp android
