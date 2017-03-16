@@ -15,6 +15,7 @@ https://github.com/electrode-io/electrode-ota-server
 <ul>
   <li>npm
   <li>cordova
+  <li>docker
   <li>Android SDK and tools
   <li>Android Studio
   <li>github account
